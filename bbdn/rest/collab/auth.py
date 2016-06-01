@@ -124,3 +124,16 @@ class AuthToken():
             self.setToken()
 
         return self.TOKEN
+
+    def isExpired(self, expiration_datetime):
+        expired = False
+        print ("[auth:isExpired()] Token Expires at " + expiration_datetime.strftime("%H:%M:%S"))
+
+        time_left = (expiration_datetime - datetime.datetime.now()).total_seconds()
+        print ("[auth:isExpired()] Time Left on Token (in seconds): " + str(time_left))
+        if time_left < 1:
+            print ("[auth:isExpired()] Token almost expired retrieving new token in two seconds.")
+            time.sleep( 1 )
+            expired = True
+
+        return expired
