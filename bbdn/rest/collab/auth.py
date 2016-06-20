@@ -39,9 +39,9 @@ class AuthToken():
     target_url = ''
     def __init__(self, URL):
         
-        self.KEY = "scott_testing_key" #Example Only. Change to your secret
+        self.KEY = "insert_key_here" #Example Only. Change to your secret
         print "KEY: " + self.KEY
-        self.SECRET = "eyJpc3MiOiJiYkNvbGxhYkFwaSIsInN1"#Example Only. Change to your key
+        self.SECRET = "insert_secret_here"#Example Only. Change to your key
         print 'SECRET: ' + self.SECRET
         exp = datetime.datetime.utcnow()
         print "TS1: " + str(exp)
